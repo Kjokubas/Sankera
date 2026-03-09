@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SANKERA — Trusted Grain Traders | Warsaw, Poland</title>
+  <meta name="description" content="Sankera Sp. z o.o. — Specialists in high-quality grain trade, connecting trusted farmers, producers, and processing companies across Europe.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1E3A1E;
+      --accent: #C8963E;
+      --accent-light: #E8B96A;
+      --bg: #F5F2EC;
+      --bg-dark: #111A0F;
+      --text: #1C1C1C;
+      --text-light: #6B6B6B;
+      --white: #FFFFFF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scrollbar-width: none; }
+
+    ::-webkit-scrollbar { display: none; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ═══════════ NAV ═══════════ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 24px 0;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      transition: width 0.5s ease;
+    }
+
+    .nav.scrolled {
+      background: rgba(10, 15, 10, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 16px 0;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav.scrolled::after {
+      width: 100%;
+    }
+
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+      opacity: 0.5;
+    }
+
+    .nav-logo::after {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+      opacity: 0.5;
+    }
+
+    .nav-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.55rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.3);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 3px 8px;
+      border-radius: 2px;
+      margin-left: -4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links li:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -4px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 12px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      position: relative;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 2px;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-light);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 50%;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      width: 22px;
+      height: 1.5px;
+      background: var(--accent);
+      transition: all 0.3s ease;
+    }
+
+    .hamburger-toggle { display: none; }
+
+    /* ═══════════ HERO ═══════════ */
+    .hero {
+      width: 100%;
+      min-height: 100vh;
+      background: url('public/Mountains.jpg') center center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(17, 26, 15, 0.45);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .hero-label {
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 .accent { color: var(--accent); }
+
+    .hero-sub {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: rgba(255,255,255,0.75);
+      max-width: 520px;
+      margin: 0 auto 44px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #111;
+      padding: 14px 36px;
+      border-radius: 2px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.8rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.4);
+      color: var(--white);
+      padding: 14px 36px;
+      border-radius: 2px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.8rem;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+
+    /* ═══════════ ABOUT ═══════════ */
+    .about {
+      background: #ffffff;
+      padding: 120px 0;
+      position: relative;
+    }
+
+    .about::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Cline x1='50' y1='0' x2='50' y2='50' stroke='%23e0e0e0' stroke-width='1' shape-rendering='crispEdges'/%3E%3Cline x1='0' y1='50' x2='50' y2='50' stroke='%23e0e0e0' stroke-width='1' shape-rendering='crispEdges'/%3E%3C/svg%3E");
+      background-size: 50px 50px;
+      opacity: 0.65;
+      -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+      mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+    }
+
+    .about .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .about-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: var(--primary);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+
+    .about-left p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: var(--text-light);
+      line-height: 1.8;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 36px;
+      padding-top: 36px;
+      border-top: none;
+    }
+
+    .stat-box .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 2.2rem;
+      line-height: 1;
+    }
+
+    .stat-box .stat-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-top: 6px;
+    }
+
+
+    /* ═══════════ PRODUCTS ═══════════ */
+    .products {
+      background: var(--bg-dark);
+      padding: 120px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: var(--white);
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      font-size: 1rem;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      padding: 32px 24px;
+      transition: all 0.3s ease;
+    }
+
+    .product-card:hover {
+      background: rgba(200,150,62,0.08);
+      border-color: rgba(200,150,62,0.3);
+      transform: translateY(-4px);
+    }
+
+    .product-image {
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      position: relative;
+    }
+
+    .product-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Cline x1='50' y1='0' x2='50' y2='50' stroke='%23e0e0e0' stroke-width='1' shape-rendering='crispEdges'/%3E%3Cline x1='0' y1='50' x2='50' y2='50' stroke='%23e0e0e0' stroke-width='1' shape-rendering='crispEdges'/%3E%3C/svg%3E");
+      background-size: 50px 50px;
+      -webkit-mask-image: radial-gradient(ellipse at center, black 50%, transparent 85%);
+      mask-image: radial-gradient(ellipse at center, black 50%, transparent 85%);
+    }
+
+    .product-image img {
+      width: 85%;
+      height: 85%;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+    }
+
+    .product-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: var(--white);
+      font-size: 1.1rem;
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+
+    .product-card p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    .product-card { cursor: pointer; }
+
+    /* ═══════════ PRODUCT MODAL ═══════════ */
+    .product-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+      padding: 24px;
+    }
+
+    .product-modal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .product-modal {
+      background: var(--bg-dark);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      max-width: 640px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      transform: translateY(30px) scale(0.97);
+      transition: transform 0.35s ease;
+      position: relative;
+    }
+
+    .product-modal-overlay.active .product-modal {
+      transform: translateY(0) scale(1);
+    }
+
+    .product-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+
+    .product-modal-close:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .product-modal-close svg {
+      width: 16px;
+      height: 16px;
+      stroke: rgba(255,255,255,0.6);
+    }
+
+    .product-modal-image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #ffffff;
+      border-radius: 8px 8px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .product-modal-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Cline x1='50' y1='0' x2='50' y2='50' stroke='%23e0e0e0' stroke-width='1' shape-rendering='crispEdges'/%3E%3Cline x1='0' y1='50' x2='50' y2='50' stroke='%23e0e0e0' stroke-width='1' shape-rendering='crispEdges'/%3E%3C/svg%3E");
+      background-size: 50px 50px;
+      -webkit-mask-image: radial-gradient(ellipse at center, black 50%, transparent 85%);
+      mask-image: radial-gradient(ellipse at center, black 50%, transparent 85%);
+    }
+
+    .product-modal-image img {
+      max-width: 70%;
+      max-height: 90%;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+    }
+
+    .product-modal-body {
+      padding: 40px;
+    }
+
+    .product-modal-body .section-label {
+      margin-bottom: 8px;
+    }
+
+    .product-modal-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--white);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .product-modal-body .modal-desc {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .product-modal-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .modal-detail-item {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 4px;
+      padding: 16px 20px;
+    }
+
+    .modal-detail-item .detail-label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .modal-detail-item .detail-value {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.85rem;
+    }
+
+    .product-modal-cta {
+      margin-top: 28px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .product-modal-cta a {
+      display: inline-block;
+      background: var(--accent);
+      color: #111;
+      padding: 12px 28px;
+      border-radius: 2px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: all 0.3s ease;
+    }
+
+    .product-modal-cta a:hover {
+      background: var(--accent-light);
+    }
+
+    .product-modal-cta span {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      .product-modal-body { padding: 28px; }
+      .product-modal-details { grid-template-columns: 1fr; }
+    }
+
+    /* ═══════════ STRENGTHS ═══════════ */
+    .strengths {
+      background: var(--bg);
+      padding: 120px 0;
+    }
+
+    .strengths .section-header h2 {
+      color: var(--primary);
+    }
+
+    .strengths .section-header p {
+      color: var(--text-light);
+    }
+
+    .strengths-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .strength-card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 40px 32px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+    }
+
+    .strength-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+      border-bottom-color: var(--accent);
+    }
+
+    .strength-number {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .strength-icon {
+      margin-top: 12px;
+      color: var(--accent);
+    }
+
+    .strength-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .strength-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 1.1rem;
+      margin-top: 16px;
+      margin-bottom: 10px;
+    }
+
+    .strength-card p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* ═══════════ TRUST BAR ═══════════ */
+    .trust-bar {
+      background: #0a0a08;
+      padding: 40px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .trust-bar::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Cline x1='50' y1='0' x2='50' y2='50' stroke='%23ffffff' stroke-width='1' shape-rendering='crispEdges'/%3E%3Cline x1='0' y1='50' x2='50' y2='50' stroke='%23ffffff' stroke-width='1' shape-rendering='crispEdges'/%3E%3C/svg%3E");
+      background-size: 50px 50px;
+      opacity: 0.06;
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    }
+
+    .trust-items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      background: rgba(255,255,255,0.03);
+      transition: all 0.3s ease;
+    }
+
+    .trust-item:hover {
+      border-color: rgba(200,150,62,0.3);
+      background: rgba(200,150,62,0.05);
+    }
+
+    .trust-item svg {
+      width: 32px;
+      height: 32px;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .trust-item span {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.75rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    /* ═══════════ CONTACT ═══════════ */
+    .contact {
+      background: var(--bg-dark);
+      padding: 120px 0;
+    }
+
+    .contact .section-header {
+      margin-bottom: 64px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .contact-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      padding: 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+      border-color: rgba(200,150,62,0.3);
+      background: rgba(200,150,62,0.05);
+    }
+
+    .contact-card svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .contact-card-content .contact-label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+
+    .contact-card-content .contact-value {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: var(--white);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .contact-card-content a {
+      color: var(--white);
+      transition: color 0.3s ease;
+    }
+
+    .contact-card-content a:hover {
+      color: var(--accent-light);
+    }
+
+    .company-details {
+      margin-top: 20px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.6;
+    }
+
+    .contact-cta {
+      background: linear-gradient(135deg, var(--accent), #A67830);
+      border-radius: 4px;
+      padding: 60px 48px;
+    }
+
+    .contact-cta h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: #111;
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .contact-cta > p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: rgba(0,0,0,0.75);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .btn-email {
+      display: block;
+      width: 100%;
+      background: #111;
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 2px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: background 0.3s ease;
+    }
+
+    .btn-email:hover {
+      background: #222;
+    }
+
+    .language-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .language-row .flags {
+      font-size: 1.2rem;
+      letter-spacing: 0.3em;
+    }
+
+    .language-row span:last-child {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.8rem;
+      color: rgba(0,0,0,0.5);
+    }
+
+    /* ═══════════ FOOTER ═══════════ */
+    .footer {
+      background: #0A0F0A;
+      padding: 40px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .footer-left .logo {
+      font-family: 'Playfair Display', serif;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .footer-left .suffix {
+      font-family: 'Inter', sans-serif;
+      color: rgba(255,255,255,0.3);
+      font-size: 0.75rem;
+    }
+
+    .footer-center {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: rgba(255,255,255,0.3);
+      font-size: 0.75rem;
+    }
+
+    .footer-right {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: rgba(255,255,255,0.3);
+      font-size: 0.75rem;
+    }
+
+    /* ═══════════ RESPONSIVE ═══════════ */
+    @media (max-width: 1024px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .strengths-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 24px; }
+
+      .hamburger { display: flex; }
+      .nav-tag { display: none; }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: rgba(17, 26, 15, 0.98);
+        backdrop-filter: blur(16px);
+        flex-direction: column;
+        padding: 100px 40px 40px;
+        gap: 28px;
+        transition: right 0.4s ease;
+      }
+
+      .hamburger-toggle:checked ~ .nav-links {
+        right: 0;
+      }
+
+      .hamburger-toggle:checked ~ .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      .hamburger-toggle:checked ~ .hamburger span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger-toggle:checked ~ .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+
+      .hero h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+      .hero-sub { font-size: 0.95rem; }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+
+      .about-stats { gap: 24px; }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .strengths-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-cta { padding: 40px 28px; }
+
+      .footer .container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .about { padding: 80px 0; }
+      .products { padding: 80px 0; }
+      .strengths { padding: 80px 0; }
+      .contact { padding: 80px 0; }
+    }
+
+    /* ═══════════ ANIMATIONS ═══════════ */
+    .hero-label,
+    .hero-line-1,
+    .hero-line-2,
+    .hero-sub,
+    .hero-buttons {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SVG Noise Filter -->
+  <svg style="position:absolute;width:0;height:0">
+    <defs>
+      <filter id="noiseFilter">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+        <feColorMatrix type="saturate" values="0"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ═══════════ NAV ═══════════ -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <a href="#" class="nav-logo">SANKERA</a>
+      <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle" aria-label="Toggle menu">
+      <label for="hamburger-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#strengths">Strengths</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-label">EST. Warsaw &middot; Grain Trading</p>
+      <h1>
+        <span class="hero-line-1">Trusted Grain</span><br>
+        <span class="hero-line-2"><span class="accent">Traders</span></span>
+      </h1>
+      <p class="hero-sub">Specialists in high-quality grain trade — connecting trusted farmers, producers, and processing companies across Europe.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Get In Touch</a>
+        <a href="#products" class="btn-secondary">Our Products &darr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ABOUT ═══════════ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <p class="section-label">About Sankera</p>
+          <h2>Where Quality Meets Reliability</h2>
+          <p>We specialize in the trade of high-quality grains, serving as both a buyer and supplier. Our core products include white and yellow mustard seeds, brown flaxseeds, oilseed radish, oats, and rye.</p>
+          <p>We work closely with farmers, producers, and processing companies to ensure a consistent supply of grains that meet the highest quality standards. Whether sourcing from trusted growers or supplying directly to clients — reliability is at our core.</p>
+          <div class="about-stats">
+            <div class="stat-box">
+              <div class="stat-number">6</div>
+              <div class="stat-label">Grain Types</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">4</div>
+              <div class="stat-label">Languages Spoken</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">EU</div>
+              <div class="stat-label">Market Coverage</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PRODUCTS ═══════════ -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">What We Trade</p>
+        <h2>Our Product Range</h2>
+        <p>High-quality grains sourced from trusted European growers</p>
+      </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="public/Flaxseed.png" alt="Brown Flaxseeds">
+          </div>
+          <h3>Brown Flaxseeds</h3>
+          <p>Nutrient-rich flax seeds with consistent quality grading.</p>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="public/White mustard.png" alt="White Mustard Seeds">
+          </div>
+          <h3>White Mustard Seeds</h3>
+          <p>Premium quality white mustard seeds for processing and export.</p>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="public/Yellow mustard.png" alt="Yellow Mustard Seeds">
+          </div>
+          <h3>Yellow Mustard Seeds</h3>
+          <p>Premium quality yellow mustard seeds for condiments and oil extraction.</p>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="public/Oats.png" alt="Oats">
+          </div>
+          <h3>Oats</h3>
+          <p>Clean, high-yield oats for food processing and feed industries.</p>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="public/Rye.png" alt="Rye">
+          </div>
+          <h3>Rye</h3>
+          <p>Robust rye grain sourced from reliable Central European producers.</p>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="public/oilseed radish.png" alt="Oilseed Radish">
+          </div>
+          <h3>Oilseed Radish</h3>
+          <p>Specialist crop used in oil production and cover cropping.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ STRENGTHS ═══════════ -->
+  <section class="strengths" id="strengths">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Why Choose Us</p>
+        <h2>The Sankera Difference</h2>
+        <p style="max-width:600px;margin:0 auto">What sets us apart in the European grain trading market</p>
+      </div>
+      <div class="strengths-grid">
+        <div class="strength-card">
+          <div class="strength-number">01</div>
+          <div class="strength-icon">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="8" cy="8" r="3"/><circle cx="24" cy="8" r="3"/><circle cx="8" cy="24" r="3"/><circle cx="24" cy="24" r="3"/><circle cx="16" cy="16" r="3"/>
+            </svg>
+          </div>
+          <h3>Wide Product Range</h3>
+          <p>Offering diverse high-quality grains including mustard seeds, flaxseeds, oilseed radish, oats, and rye.</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-number">02</div>
+          <div class="strength-icon">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M8 16 A8 8 0 0 1 24 16"/><path d="M24 16 A8 8 0 0 1 8 16"/>
+              <polyline points="6 12 8 16 12 14"/><polyline points="26 20 24 16 20 18"/>
+            </svg>
+          </div>
+          <h3>Dual Role in the Market</h3>
+          <p>Operating as both a buyer and supplier — ensuring flexibility and reliability in every trade.</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-number">03</div>
+          <div class="strength-icon">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="10" cy="16" r="5"/><circle cx="22" cy="16" r="5"/><line x1="15" y1="16" x2="17" y2="16"/>
+            </svg>
+          </div>
+          <h3>Strong Partnerships</h3>
+          <p>Close cooperation with farmers, producers, and processing companies guarantees long-term supply chains.</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-number">04</div>
+          <div class="strength-icon">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 4 L28 12 V24 L16 28 L4 24 V12 Z"/>
+              <polyline points="10 16 14 20 22 12" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Quality Assurance</h3>
+          <p>Commitment to delivering grains that meet the highest standards through careful sourcing and selection.</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-number">05</div>
+          <div class="strength-icon">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="16" cy="8" r="3"/><circle cx="8" cy="24" r="3"/><circle cx="24" cy="24" r="3"/>
+              <line x1="16" y1="11" x2="8" y2="21"/><line x1="16" y1="11" x2="24" y2="21"/><line x1="11" y1="24" x2="21" y2="24"/>
+            </svg>
+          </div>
+          <h3>Trusted Network</h3>
+          <p>Established relationships with reliable growers and traders provide consistency in every transaction.</p>
+        </div>
+        <div class="strength-card">
+          <div class="strength-number">06</div>
+          <div class="strength-icon">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="16" cy="12" r="5"/>
+              <path d="M8 28 C8 22 12 18 16 18 C20 18 24 22 24 28"/>
+              <polygon points="22 6 23 9 26 9 24 11 25 14 22 12 19 14 20 11 18 9 21 9" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <h3>Customer-Oriented Approach</h3>
+          <p>Supplying products directly to trusted clients with a focus on reliability, transparency, and mutual growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TRUST BAR ═══════════ -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><ellipse cx="12" cy="12" rx="5" ry="10"/></svg>
+          <span>European Market Coverage</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4 C8 4 4 8 4 12 L8 12 C8 10 10 8 12 8 V4Z"/><path d="M12 4 C16 4 20 8 20 12 L16 12 C16 10 14 8 12 8 V4Z"/><path d="M4 12 C4 16 8 20 12 20 V16 C10 16 8 14 8 12 H4Z"/><path d="M20 12 C20 16 16 20 12 20 V16 C14 16 16 14 16 12 H20Z"/></svg>
+          <span>Long-Term Trade Partnerships</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 L15 8 L22 9 L17 14 L18 22 L12 18 L6 22 L7 14 L2 9 L9 8 Z"/></svg>
+          <span>Highest Quality Standards</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="2" x2="12" y2="22"/><path d="M8 6 Q12 10 16 6"/><path d="M8 10 Q12 14 16 10"/><path d="M8 14 Q12 18 16 14"/></svg>
+          <span>6 Premium Grain Products</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Get In Touch</p>
+        <h2>Let's Build a Partnership</h2>
+        <p style="max-width:560px;margin:0 auto">Our team speaks English, Polish, Lithuanian, and Ukrainian. Reach out to our sales team — we'll respond as soon as possible.</p>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-cards">
+            <a href="https://maps.google.com/?q=Aleja+Solidarności+117/207,+00-140+Warszawa,+Poland" target="_blank" rel="noopener" class="contact-card">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2 C6 2 3 5.5 3 10 C3 16 10 18 10 18 C10 18 17 16 17 10 C17 5.5 14 2 10 2Z"/><circle cx="10" cy="10" r="3"/></svg>
+              <div class="contact-card-content">
+                <div class="contact-label">Address</div>
+                <div class="contact-value">Ul. Aleja &#8222;Solidarno&#347;ci&#8221; 117/207<br>00-140 Warszawa, Poland</div>
+              </div>
+            </a>
+            <a href="mailto:sales@sankera.com" class="contact-card">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="16" height="12" rx="2"/><polyline points="2 4 10 11 18 4"/></svg>
+              <div class="contact-card-content">
+                <div class="contact-label">Email</div>
+                <div class="contact-value">sales@sankera.com</div>
+              </div>
+            </a>
+            <a href="tel:+48604063265" class="contact-card">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4 C3 4 4 2 6 2 C8 2 9 4 9 4 L9 6 C9 6 9 7 8 8 L7 9 C7 9 9 13 11 15 C13 17 15 17 15 17 L16 16 C17 15 18 15 18 15 L18 17 C18 17 18 19 16 19 C14 19 3 12 3 4Z"/></svg>
+              <div class="contact-card-content">
+                <div class="contact-label">Phone</div>
+                <div class="contact-value">+48 604 063 265</div>
+              </div>
+            </a>
+          </div>
+          <div class="company-details">
+            Sankera Sp. z o.o.<br>
+            KRS: 0000977117 &middot; NIP: 5252911927 &middot; REGON: 522299130
+          </div>
+        </div>
+        <div class="contact-cta">
+          <h3>Ready to Trade?</h3>
+          <p>Whether you're looking to buy or sell premium grains, our team is ready to help you build a reliable, long-term supply chain.</p>
+          <a href="mailto:sales@sankera.com" class="btn-email">Email Our Sales Team &rarr;</a>
+          <div class="language-row">
+            <span class="flags">&#127468;&#127463; &#127477;&#127473; &#127473;&#127481; &#127482;&#127462;</span>
+            <span>We speak your language</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PRODUCT MODAL ═══════════ -->
+  <div class="product-modal-overlay" id="productModal">
+    <div class="product-modal">
+      <button class="product-modal-close" id="modalClose">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="3" x2="13" y2="13"/><line x1="13" y1="3" x2="3" y2="13"/></svg>
+      </button>
+      <div class="product-modal-image" id="modalImage">
+        <img src="" alt="">
+      </div>
+      <div class="product-modal-body">
+        <p class="section-label" id="modalCategory"></p>
+        <h2 id="modalTitle"></h2>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="product-modal-details" id="modalDetails"></div>
+        <div class="product-modal-cta">
+          <a href="mailto:sales@sankera.com">Inquire Now &rarr;</a>
+          <span>sales@sankera.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-left">
+        <span class="logo">SANKERA</span>
+        <span class="suffix">Sp. z o.o.</span>
+      </div>
+      <div class="footer-center">Trusted Grain Traders &middot; Warsaw, Poland</div>
+      <div class="footer-right">&copy; 2025 Sankera Sp. z o.o.</div>
+    </div>
+  </footer>
+
+  <!-- ═══════════ SCRIPTS ═══════════ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('hamburger-toggle').checked = false;
+      });
+    });
+
+    // Hero animation on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const heroTl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 0.8 } });
+      heroTl
+        .fromTo('.hero-label', { y: 40, opacity: 0 }, { y: 0, opacity: 1 }, 0.3)
+        .fromTo('.hero-line-1', { y: 40, opacity: 0 }, { y: 0, opacity: 1 }, 0.45)
+        .fromTo('.hero-line-2', { y: 40, opacity: 0 }, { y: 0, opacity: 1 }, 0.6)
+        .fromTo('.hero-sub', { y: 40, opacity: 0 }, { y: 0, opacity: 1 }, 0.75)
+        .fromTo('.hero-buttons', { y: 40, opacity: 0 }, { y: 0, opacity: 1 }, 0.9);
+    });
+
+    // About section
+    gsap.fromTo('.about-left', { x: -60, opacity: 0 }, {
+      x: 0, opacity: 1, duration: 0.9, ease: 'power3.out',
+      scrollTrigger: { trigger: '.about', start: 'top 80%', toggleActions: 'play none none none' }
+    });
+
+
+    // Products section
+    gsap.fromTo('.product-card', { y: 50, opacity: 0 }, {
+      y: 0, opacity: 1, duration: 0.7, ease: 'power3.out', stagger: 0.1,
+      scrollTrigger: { trigger: '.products-grid', start: 'top 80%', toggleActions: 'play none none none' }
+    });
+
+    // Strengths section
+    gsap.fromTo('.strength-card', { y: 40, opacity: 0 }, {
+      y: 0, opacity: 1, duration: 0.7, ease: 'power3.out', stagger: 0.12,
+      scrollTrigger: { trigger: '.strengths-grid', start: 'top 80%', toggleActions: 'play none none none' }
+    });
+
+    // Contact section
+    gsap.fromTo('.contact-card', { y: 30, opacity: 0 }, {
+      y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', stagger: 0.1,
+      scrollTrigger: { trigger: '.contact-grid', start: 'top 80%', toggleActions: 'play none none none' }
+    });
+
+    gsap.fromTo('.contact-cta', { y: 40, opacity: 0 }, {
+      y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.2,
+      scrollTrigger: { trigger: '.contact-grid', start: 'top 80%', toggleActions: 'play none none none' }
+    });
+
+    // Trust bar
+    gsap.fromTo('.trust-item', { y: 20, opacity: 0 }, {
+      y: 0, opacity: 1, duration: 0.5, ease: 'power3.out', stagger: 0.1,
+      scrollTrigger: { trigger: '.trust-bar', start: 'top 85%', toggleActions: 'play none none none' }
+    });
+
+    // Product modal data
+    const productData = {
+      'Brown Flaxseeds': {
+        category: 'Oilseed',
+        desc: 'Our brown flax seeds (linseed) are nutrient-rich and traded with consistent quality grading. Flax seeds are valued for their high omega-3 fatty acid content and are used extensively in health food production, bakery products, and industrial oil manufacturing. We ensure every batch meets strict quality parameters including moisture, purity, and oil content standards required by European processors.',
+        details: [
+          { label: 'Origin', value: 'Central Europe' },
+          { label: 'Use Cases', value: 'Health foods, bakery, industrial oils' },
+          { label: 'Key Nutrient', value: 'High Omega-3 content' },
+          { label: 'Quality', value: 'Graded for purity & moisture' }
+        ]
+      },
+      'White Mustard Seeds': {
+        category: 'Oilseed',
+        desc: 'Our premium white mustard seeds are carefully sourced from trusted European farms and undergo rigorous quality checks before trade. White mustard seeds are widely used in the food processing industry for condiment production, as well as in oil extraction and pharmaceutical applications. We supply both whole seeds and cleaned varieties, graded to meet international standards for purity, moisture content, and oil yield.',
+        details: [
+          { label: 'Origin', value: 'Central & Eastern Europe' },
+          { label: 'Use Cases', value: 'Condiments, oil extraction, pharmaceuticals' },
+          { label: 'Grades', value: 'Whole, cleaned, food-grade' },
+          { label: 'Availability', value: 'Year-round supply' }
+        ]
+      },
+      'Yellow Mustard Seeds': {
+        category: 'Oilseed',
+        desc: 'Our premium yellow mustard seeds are sourced from reliable European growers and selected for their strong flavor profile and high oil content. Yellow mustard seeds are essential in condiment manufacturing, spice blends, and oil extraction. Each batch is quality-tested for purity, moisture, and consistency to meet the demands of food processors and industrial buyers alike.',
+        details: [
+          { label: 'Origin', value: 'Central & Eastern Europe' },
+          { label: 'Use Cases', value: 'Condiments, spice blends, oil extraction' },
+          { label: 'Grades', value: 'Whole, cleaned, food-grade' },
+          { label: 'Availability', value: 'Year-round supply' }
+        ]
+      },
+      'Oats': {
+        category: 'Cereal Grain',
+        desc: 'Our clean, high-yield oats serve both the food processing and animal feed industries. Oats have seen growing demand driven by the health food market — used in cereals, oat milk production, granola, and bakery products. We also supply feed-grade oats for livestock nutrition. Every batch is tested for purity, moisture content, and beta-glucan levels to match the specifications of food manufacturers and feed producers across Europe.',
+        details: [
+          { label: 'Origin', value: 'Northern & Central Europe' },
+          { label: 'Use Cases', value: 'Cereals, oat milk, feed' },
+          { label: 'Quality', value: 'Tested for purity & beta-glucan' },
+          { label: 'Grades', value: 'Food-grade & feed-grade' }
+        ]
+      },
+      'Rye': {
+        category: 'Cereal Grain',
+        desc: 'We trade robust rye grain sourced from reliable Central European producers. Rye is a staple grain in European bread-making, particularly for traditional dark breads and crispbreads. It is also used in animal feed and in the production of rye whiskey and vodka. Our rye meets strict quality parameters for Hagberg falling number, protein content, and cleanliness — ensuring it is suitable for milling, baking, and distilling applications.',
+        details: [
+          { label: 'Origin', value: 'Central European producers' },
+          { label: 'Use Cases', value: 'Bread-making, distilling, feed' },
+          { label: 'Quality Tests', value: 'Hagberg, protein, purity' },
+          { label: 'Tradition', value: 'European staple grain' }
+        ]
+      },
+      'Oilseed Radish': {
+        category: 'Specialist Crop',
+        desc: 'Oilseed radish is a specialist crop primarily used in oil production and as a high-performance cover crop in sustainable agriculture. As a cover crop, it helps improve soil structure, suppress weeds, and reduce nitrogen leaching. The seeds are also pressed for oil used in biodiesel and industrial applications. We work with experienced growers to ensure consistent seed quality and germination rates for both agricultural and industrial buyers.',
+        details: [
+          { label: 'Origin', value: 'European specialist farms' },
+          { label: 'Use Cases', value: 'Oil production, cover cropping' },
+          { label: 'Agriculture', value: 'Soil improvement & weed control' },
+          { label: 'Market', value: 'Industrial & agricultural' }
+        ]
+      }
+    };
+
+    // Product image mapping
+    const productImages = {
+      'Brown Flaxseeds': 'public/Flaxseed.png',
+      'White Mustard Seeds': 'public/White mustard.png',
+      'Yellow Mustard Seeds': 'public/Yellow mustard.png',
+      'Oats': 'public/Oats.png',
+      'Rye': 'public/Rye.png',
+      'Oilseed Radish': 'public/oilseed radish.png'
+    };
+
+    // Product modal logic
+    const modal = document.getElementById('productModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalCategory = document.getElementById('modalCategory');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalDetails = document.getElementById('modalDetails');
+    const modalImage = document.getElementById('modalImage');
+
+    document.querySelectorAll('.product-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const name = card.querySelector('h3').textContent;
+        const data = productData[name];
+        if (!data) return;
+
+        const img = modalImage.querySelector('img');
+        img.src = productImages[name] || '';
+        img.alt = name;
+
+        modalTitle.textContent = name;
+        modalCategory.textContent = data.category;
+        modalDesc.textContent = data.desc;
+        modalDetails.innerHTML = data.details.map(d =>
+          `<div class="modal-detail-item"><div class="detail-label">${d.label}</div><div class="detail-value">${d.value}</div></div>`
+        ).join('');
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
