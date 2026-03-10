@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SANKERA — Trusted Grain Traders | Warsaw, Poland</title>
-  <meta name="description" content="Sankera Sp. z o.o. — Specialists in high-quality grain trade, connecting trusted farmers, producers, and processing companies across Europe.">
+  <title>SANKERA - Patikimi grūdų prekiautojai | Varšuva, Lenkija</title>
+  <meta name="description" content="Sankera Sp. z o.o. - Aukštos kokybės grūdų prekybos specialistai, jungiantys patikimus ūkininkus, gamintojus ir perdirbimo įmones visoje Europoje.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -297,7 +297,7 @@
     .hero {
       width: 100%;
       min-height: 100vh;
-      background: linear-gradient(rgba(17, 26, 15, 0.53), rgba(17, 26, 15, 0.53)), url('public/Mountains.jpg') center center / cover no-repeat;
+      background: linear-gradient(rgba(17, 26, 15, 0.53), rgba(17, 26, 15, 0.53)), url('../public/Mountains.jpg') center center / cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1337,33 +1337,27 @@
       opacity: 0;
     }
 
-    /* Smooth reveal line for section labels */
     .section-label {
       position: relative;
     }
 
-    /* Counter animation */
     .stat-number {
       display: inline-block;
     }
 
-    /* Subtle parallax on scroll */
     .hero {
       will-change: transform;
     }
 
-    /* Product card hover lift enhancement */
     .product-card {
       transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
-    /* Smooth line draw for decorative elements */
     @keyframes lineGrow {
       from { transform: scaleX(0); }
       to { transform: scaleX(1); }
     }
 
-    /* Gentle floating for GMP badge */
     @keyframes subtleFloat {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-6px); }
@@ -1398,24 +1392,24 @@
       </label>
       <div class="nav-right">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#strengths">Strengths</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">Apie</a></li>
+          <li><a href="#products">Produktai</a></li>
+          <li><a href="#strengths">Kodėl mes</a></li>
+          <li><a href="#contact">Kontaktai</a></li>
           <div class="lang-dropdown-mobile">
-            <a href="/en" class="lang-active">EN</a>
-            <a href="/lt">LT</a>
+            <a href="/en">EN</a>
+            <a href="/lt" class="lang-active">LT</a>
             <a href="/pl">PL</a>
             <a href="/ua">UA</a>
           </div>
         </ul>
         <div class="lang-dropdown" id="langDropdown">
           <button class="lang-dropdown-btn" onclick="document.getElementById('langDropdown').classList.toggle('open')">
-            EN <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            LT <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="lang-dropdown-menu">
-            <a href="/en" class="lang-active">English</a>
-            <a href="/lt">Lietuvių</a>
+            <a href="/en">English</a>
+            <a href="/lt" class="lang-active">Lietuvių</a>
             <a href="/pl">Polski</a>
             <a href="/ua">Українська</a>
           </div>
@@ -1428,15 +1422,15 @@
   <section class="hero" id="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-label">EST. Warsaw &middot; Grain Trading</p>
+      <p class="hero-label">Varšuva &middot; Grūdų prekyba</p>
       <h1>
-        <span class="hero-line-1">Trusted Grain</span><br>
-        <span class="hero-line-2"><span class="accent">Traders</span></span>
+        <span class="hero-line-1">Patikimi grūdų</span><br>
+        <span class="hero-line-2"><span class="accent">prekiautojai</span></span>
       </h1>
-      <p class="hero-sub">Specialists in high-quality grain trade — connecting trusted farmers, producers, and processing companies across Europe.</p>
+      <p class="hero-sub">Aukštos kokybės grūdų prekybos specialistai - jungiame patikimus ūkininkus, gamintojus ir perdirbimo įmones visoje Europoje.</p>
       <div class="hero-buttons">
-        <a href="#contact" class="btn-primary">Get In Touch</a>
-        <a href="#products" class="btn-secondary">Our Products &darr;</a>
+        <a href="#contact" class="btn-primary">Susisiekite</a>
+        <a href="#products" class="btn-secondary">Mūsų produktai &darr;</a>
       </div>
     </div>
   </section>
@@ -1446,26 +1440,26 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-left">
-          <p class="section-label">About Sankera</p>
-          <h2>Where Quality Meets Reliability</h2>
-          <p>We specialize in the trade of high-quality grains, serving as both a buyer and supplier. Our core products include white and yellow mustard seeds, brown flaxseeds, oilseed radish, oats, and rye.</p>
-          <p>We work closely with farmers, producers, and processing companies to ensure a consistent supply of grains that meet the highest quality standards. Whether sourcing from trusted growers or supplying directly to clients — reliability is at our core.</p>
+          <p class="section-label">Apie Sankera</p>
+          <h2>Kokybė ir patikimumas</h2>
+          <p>Mes specializuojamės aukštos kokybės grūdų prekyboje, veikdami ir kaip pirkėjai, ir kaip tiekėjai. Mūsų pagrindiniai produktai - baltosios ir geltonosios garstyčių sėklos, rudieji linų sėmenys, aliejiniai ridikai, avižos ir rugiai.</p>
+          <p>Glaudžiai bendradarbiaujame su ūkininkais, gamintojais ir perdirbimo įmonėmis, užtikrindami nuolatinį grūdų tiekimą, atitinkantį aukščiausius kokybės standartus. Nesvarbu, ar perkame iš patikimų augintojų, ar tiekiame tiesiogiai klientams - patikimumas yra mūsų pamatas.</p>
           <div class="about-stats">
             <div class="stat-box">
               <div class="stat-number">6</div>
-              <div class="stat-label">Grain Types</div>
+              <div class="stat-label">Grūdų rūšys</div>
             </div>
             <div class="stat-box">
               <div class="stat-number">4</div>
-              <div class="stat-label">Languages Spoken</div>
+              <div class="stat-label">Kalbos</div>
             </div>
             <div class="stat-box">
-              <div class="stat-number">EU</div>
-              <div class="stat-label">Market Coverage</div>
+              <div class="stat-number">ES</div>
+              <div class="stat-label">Rinkos aprėptis</div>
             </div>
           </div>
           <div class="gmp-badge">
-            <img src="public/GMP.png" alt="GMP Certification">
+            <img src="../public/GMP.png" alt="GMP sertifikatas">
           </div>
         </div>
       </div>
@@ -1476,52 +1470,52 @@
   <section class="products" id="products">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">What We Trade</p>
-        <h2>Our Product Range</h2>
-        <p>High-quality grains sourced from trusted European growers</p>
+        <p class="section-label">Kuo prekiaujame</p>
+        <h2>Mūsų produktų asortimentas</h2>
+        <p>Aukštos kokybės grūdai iš patikimų Europos augintojų</p>
       </div>
       <div class="products-grid">
         <div class="product-card">
           <div class="product-image">
-            <img src="public/Flaxseed.png" alt="Brown Flaxseeds">
+            <img src="../public/Flaxseed.png" alt="Rudieji linų sėmenys">
           </div>
-          <h3>Brown Flaxseeds</h3>
-          <p>Nutrient-rich flax seeds with consistent quality grading.</p>
+          <h3>Rudieji linų sėmenys</h3>
+          <p>Maistingomis medžiagomis turtingi linų sėmenys su nuosekliu kokybės įvertinimu.</p>
         </div>
         <div class="product-card">
           <div class="product-image">
-            <img src="public/White mustard.png" alt="White Mustard Seeds">
+            <img src="../public/White mustard.png" alt="Baltųjų garstyčių sėklos">
           </div>
-          <h3>White Mustard Seeds</h3>
-          <p>Premium quality white mustard seeds for processing and export.</p>
+          <h3>Baltųjų garstyčių sėklos</h3>
+          <p>Aukščiausios kokybės baltųjų garstyčių sėklos perdirbimui ir eksportui.</p>
         </div>
         <div class="product-card">
           <div class="product-image">
-            <img src="public/Yellow mustard.png" alt="Yellow Mustard Seeds">
+            <img src="../public/Yellow mustard.png" alt="Geltonųjų garstyčių sėklos">
           </div>
-          <h3>Yellow Mustard Seeds</h3>
-          <p>Premium quality yellow mustard seeds for condiments and oil extraction.</p>
+          <h3>Geltonųjų garstyčių sėklos</h3>
+          <p>Aukščiausios kokybės geltonųjų garstyčių sėklos prieskoniniam ir aliejaus gamybai.</p>
         </div>
         <div class="product-card">
           <div class="product-image">
-            <img src="public/Oats.png" alt="Oats">
+            <img src="../public/Oats.png" alt="Avižos">
           </div>
-          <h3>Oats</h3>
-          <p>Clean, high-yield oats for food processing and feed industries.</p>
+          <h3>Avižos</h3>
+          <p>Švarios, derlingos avižos maisto perdirbimui ir pašarų pramonei.</p>
         </div>
         <div class="product-card">
           <div class="product-image">
-            <img src="public/Rye.png" alt="Rye">
+            <img src="../public/Rye.png" alt="Rugiai">
           </div>
-          <h3>Rye</h3>
-          <p>Robust rye grain sourced from reliable Central European producers.</p>
+          <h3>Rugiai</h3>
+          <p>Tvirtos kokybės rugiai iš patikimų Vidurio Europos gamintojų.</p>
         </div>
         <div class="product-card">
           <div class="product-image">
-            <img src="public/oilseed radish.png" alt="Oilseed Radish">
+            <img src="../public/oilseed radish.png" alt="Aliejiniai ridikai">
           </div>
-          <h3>Oilseed Radish</h3>
-          <p>Specialist crop used in oil production and cover cropping.</p>
+          <h3>Aliejiniai ridikai</h3>
+          <p>Specialistų kultūra, naudojama aliejaus gamybai ir dirvos gerinimui.</p>
         </div>
       </div>
     </div>
@@ -1531,9 +1525,9 @@
   <section class="strengths" id="strengths">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">Why Choose Us</p>
-        <h2>The Sankera Difference</h2>
-        <p style="max-width:600px;margin:0 auto">What sets us apart in the European grain trading market</p>
+        <p class="section-label">Kodėl rinktis mus</p>
+        <h2>Sankera išskirtinumas</h2>
+        <p style="max-width:600px;margin:0 auto">Kas mus išskiria Europos grūdų prekybos rinkoje</p>
       </div>
       <div class="strengths-grid">
         <div class="strength-card">
@@ -1543,8 +1537,8 @@
               <circle cx="8" cy="8" r="3"/><circle cx="24" cy="8" r="3"/><circle cx="8" cy="24" r="3"/><circle cx="24" cy="24" r="3"/><circle cx="16" cy="16" r="3"/>
             </svg>
           </div>
-          <h3>Wide Product Range</h3>
-          <p>Offering diverse high-quality grains including mustard seeds, flaxseeds, oilseed radish, oats, and rye.</p>
+          <h3>Platus produktų asortimentas</h3>
+          <p>Siūlome įvairius aukštos kokybės grūdus, įskaitant garstyčių sėklas, linų sėmenis, alejinius ridikus, avižas ir rugius.</p>
         </div>
         <div class="strength-card">
           <div class="strength-number">02</div>
@@ -1554,8 +1548,8 @@
               <polyline points="6 12 8 16 12 14"/><polyline points="26 20 24 16 20 18"/>
             </svg>
           </div>
-          <h3>Dual Role in the Market</h3>
-          <p>Operating as both a buyer and supplier — ensuring flexibility and reliability in every trade.</p>
+          <h3>Dvejopas vaidmuo rinkoje</h3>
+          <p>Veikiame ir kaip pirkėjai, ir kaip tiekėjai - užtikrindami lankstumą ir patikimumą kiekvienoje sandoryje.</p>
         </div>
         <div class="strength-card">
           <div class="strength-number">03</div>
@@ -1564,8 +1558,8 @@
               <circle cx="10" cy="16" r="5"/><circle cx="22" cy="16" r="5"/><line x1="15" y1="16" x2="17" y2="16"/>
             </svg>
           </div>
-          <h3>Strong Partnerships</h3>
-          <p>Close cooperation with farmers, producers, and processing companies guarantees long-term supply chains.</p>
+          <h3>Stiprios partnerystės</h3>
+          <p>Glaudus bendradarbiavimas su ūkininkais, gamintojais ir perdirbimo įmonėmis garantuoja ilgalaikes tiekimo grandines.</p>
         </div>
         <div class="strength-card">
           <div class="strength-number">04</div>
@@ -1575,8 +1569,8 @@
               <polyline points="10 16 14 20 22 12" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <h3>Quality Assurance</h3>
-          <p>Commitment to delivering grains that meet the highest standards through careful sourcing and selection.</p>
+          <h3>Kokybės užtikrinimas</h3>
+          <p>Įsipareigojimas tiekti grūdus, atitinkančius aukščiausius standartus, kruopščiai atrenkant ir tikrinant kiekvieną partiją.</p>
         </div>
         <div class="strength-card">
           <div class="strength-number">05</div>
@@ -1586,8 +1580,8 @@
               <line x1="16" y1="11" x2="8" y2="21"/><line x1="16" y1="11" x2="24" y2="21"/><line x1="11" y1="24" x2="21" y2="24"/>
             </svg>
           </div>
-          <h3>Trusted Network</h3>
-          <p>Established relationships with reliable growers and traders provide consistency in every transaction.</p>
+          <h3>Patikimas tinklas</h3>
+          <p>Nusistovėję santykiai su patikimais augintojais ir prekiautojais užtikrina nuoseklumą kiekvienoje operacijoje.</p>
         </div>
         <div class="strength-card">
           <div class="strength-number">06</div>
@@ -1598,8 +1592,8 @@
               <polygon points="22 6 23 9 26 9 24 11 25 14 22 12 19 14 20 11 18 9 21 9" fill="currentColor" stroke="none"/>
             </svg>
           </div>
-          <h3>Customer-Oriented Approach</h3>
-          <p>Supplying products directly to trusted clients with a focus on reliability, transparency, and mutual growth.</p>
+          <h3>Orientacija į klientą</h3>
+          <p>Tiekiame produktus tiesiogiai patikimiems klientams, dėmesį skirdami patikimumui, skaidrumui ir abipusiam augimui.</p>
         </div>
       </div>
     </div>
@@ -1611,19 +1605,19 @@
       <div class="trust-items">
         <div class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><ellipse cx="12" cy="12" rx="5" ry="10"/></svg>
-          <span>European Market Coverage</span>
+          <span>Europos rinkos aprėptis</span>
         </div>
         <div class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4 C8 4 4 8 4 12 L8 12 C8 10 10 8 12 8 V4Z"/><path d="M12 4 C16 4 20 8 20 12 L16 12 C16 10 14 8 12 8 V4Z"/><path d="M4 12 C4 16 8 20 12 20 V16 C10 16 8 14 8 12 H4Z"/><path d="M20 12 C20 16 16 20 12 20 V16 C14 16 16 14 16 12 H20Z"/></svg>
-          <span>Long-Term Trade Partnerships</span>
+          <span>Ilgalaikės prekybos partnerystės</span>
         </div>
         <div class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 L15 8 L22 9 L17 14 L18 22 L12 18 L6 22 L7 14 L2 9 L9 8 Z"/></svg>
-          <span>Highest Quality Standards</span>
+          <span>Aukščiausi kokybės standartai</span>
         </div>
         <div class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="2" x2="12" y2="22"/><path d="M8 6 Q12 10 16 6"/><path d="M8 10 Q12 14 16 10"/><path d="M8 14 Q12 18 16 14"/></svg>
-          <span>6 Premium Grain Products</span>
+          <span>6 aukščiausios kokybės grūdų produktai</span>
         </div>
       </div>
     </div>
@@ -1633,9 +1627,9 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">Get In Touch</p>
-        <h2>Let's Build a Partnership</h2>
-        <p style="max-width:560px;margin:0 auto">Our team speaks English, Polish, Lithuanian, and Ukrainian. Reach out to our sales team — we'll respond as soon as possible.</p>
+        <p class="section-label">Susisiekite su mumis</p>
+        <h2>Kurkime partnerystę kartu</h2>
+        <p style="max-width:560px;margin:0 auto">Mūsų komanda kalba anglų, lenkų, lietuvių ir ukrainiečių kalbomis. Kreipkitės į mūsų pardavimų komandą - atsakysime kuo greičiau.</p>
       </div>
       <div class="contact-grid">
         <div>
@@ -1643,21 +1637,21 @@
             <a href="https://maps.google.com/?q=Aleja+Solidarności+117/207,+00-140+Warszawa,+Poland" target="_blank" rel="noopener" class="contact-card">
               <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2 C6 2 3 5.5 3 10 C3 16 10 18 10 18 C10 18 17 16 17 10 C17 5.5 14 2 10 2Z"/><circle cx="10" cy="10" r="3"/></svg>
               <div class="contact-card-content">
-                <div class="contact-label">Address</div>
-                <div class="contact-value">Ul. Aleja &#8222;Solidarno&#347;ci&#8221; 117/207<br>00-140 Warszawa, Poland</div>
+                <div class="contact-label">Adresas</div>
+                <div class="contact-value">Ul. Aleja &#8222;Solidarno&#347;ci&#8221; 117/207<br>00-140 Varšuva, Lenkija</div>
               </div>
             </a>
             <a href="mailto:sales@sankera.com" class="contact-card">
               <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="16" height="12" rx="2"/><polyline points="2 4 10 11 18 4"/></svg>
               <div class="contact-card-content">
-                <div class="contact-label">Email</div>
+                <div class="contact-label">El. paštas</div>
                 <div class="contact-value">sales@sankera.com</div>
               </div>
             </a>
             <a href="tel:+48604063265" class="contact-card">
               <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4 C3 4 4 2 6 2 C8 2 9 4 9 4 L9 6 C9 6 9 7 8 8 L7 9 C7 9 9 13 11 15 C13 17 15 17 15 17 L16 16 C17 15 18 15 18 15 L18 17 C18 17 18 19 16 19 C14 19 3 12 3 4Z"/></svg>
               <div class="contact-card-content">
-                <div class="contact-label">Phone</div>
+                <div class="contact-label">Telefonas</div>
                 <div class="contact-value">+48 604 063 265</div>
               </div>
             </a>
@@ -1668,12 +1662,12 @@
           </div>
         </div>
         <div class="contact-cta">
-          <h3>Ready to Trade?</h3>
-          <p>Whether you're looking to buy or sell premium grains, our team is ready to help you build a reliable, long-term supply chain.</p>
-          <a href="mailto:sales@sankera.com" class="btn-email">Email Our Sales Team &rarr;</a>
+          <h3>Pasiruošę prekiauti?</h3>
+          <p>Nesvarbu, ar norite pirkti, ar parduoti aukštos kokybės grūdus - mūsų komanda pasiruošusi padėti jums sukurti patikimą, ilgalaikę tiekimo grandinę.</p>
+          <a href="mailto:sales@sankera.com" class="btn-email">Rašykite mūsų pardavimų komandai &rarr;</a>
           <div class="language-row">
             <span class="flags">&#127468;&#127463; &#127477;&#127473; &#127473;&#127481; &#127482;&#127462;</span>
-            <span>We speak your language</span>
+            <span>Kalbame jūsų kalba</span>
           </div>
         </div>
       </div>
@@ -1695,7 +1689,7 @@
         <p class="modal-desc" id="modalDesc"></p>
         <div class="product-modal-details" id="modalDetails"></div>
         <div class="product-modal-cta">
-          <a href="mailto:sales@sankera.com">Inquire Now &rarr;</a>
+          <a href="mailto:sales@sankera.com">Teirautis dabar &rarr;</a>
           <span>sales@sankera.com</span>
         </div>
       </div>
@@ -1709,7 +1703,7 @@
         <span class="logo">SANKERA</span>
         <span class="suffix">Sp. z o.o.</span>
       </div>
-      <div class="footer-center">Trusted Grain Traders &middot; Warsaw, Poland</div>
+      <div class="footer-center">Patikimi grūdų prekiautojai &middot; Varšuva, Lenkija</div>
       <div class="footer-right">&copy; 2025 Sankera Sp. z o.o.</div>
     </div>
   </footer>
@@ -1739,17 +1733,13 @@
       });
     });
 
-    // ═══════ PREMIUM ANIMATIONS ═══════
-
     const smooth = 'power4.out';
     const snappy = 'expo.out';
 
-    // 1. NAV — slides down elegantly on load
     gsap.to('.nav', {
       y: 0, opacity: 1, duration: 1, ease: smooth, delay: 0.1
     });
 
-    // 2. HERO — cinematic staggered entrance
     document.addEventListener('DOMContentLoaded', () => {
       const heroTl = gsap.timeline({ defaults: { ease: snappy } });
       heroTl
@@ -1761,19 +1751,12 @@
         .fromTo('.hero-buttons', { y: 20, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 0.8 }, 1.5);
     });
 
-    // 3. Subtle parallax on hero image
     gsap.to('.hero', {
       backgroundPositionY: '30%',
       ease: 'none',
-      scrollTrigger: {
-        trigger: '.hero',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: true
-      }
+      scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
     });
 
-    // Helper: animate section header elements
     function animateSectionHeader(trigger) {
       const tl = gsap.timeline({
         scrollTrigger: { trigger: trigger, start: 'top 78%', toggleActions: 'play none none none' }
@@ -1784,7 +1767,6 @@
       return tl;
     }
 
-    // 4. ABOUT — text reveals line by line with stats counting up
     const aboutTl = gsap.timeline({
       scrollTrigger: { trigger: '.about', start: 'top 75%', toggleActions: 'play none none none' }
     });
@@ -1797,14 +1779,12 @@
         document.querySelector('.gmp-badge')?.classList.add('animated');
       }}, '-=0.2');
 
-    // 5. PRODUCTS — section header + cards with scale-up reveal
     animateSectionHeader('.products');
     gsap.fromTo('.product-card', { y: 60, opacity: 0, scale: 0.92 }, {
       y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.2)', stagger: 0.08,
       scrollTrigger: { trigger: '.products-grid', start: 'top 78%', toggleActions: 'play none none none' }
     });
 
-    // 6. STRENGTHS — section header + cards slide from alternating sides
     animateSectionHeader('.strengths');
     document.querySelectorAll('.strength-card').forEach((card, i) => {
       const fromX = i % 2 === 0 ? -40 : 40;
@@ -1814,13 +1794,11 @@
       });
     });
 
-    // 7. TRUST BAR — numbers count up + items stagger in
     gsap.fromTo('.trust-item', { y: 30, opacity: 0 }, {
       y: 0, opacity: 1, duration: 0.6, ease: smooth, stagger: 0.12,
       scrollTrigger: { trigger: '.trust-bar', start: 'top 85%', toggleActions: 'play none none none' }
     });
 
-    // Animate trust bar numbers counting up
     ScrollTrigger.create({
       trigger: '.trust-bar',
       start: 'top 85%',
@@ -1845,7 +1823,6 @@
       }
     });
 
-    // 8. CONTACT — section header + cards with elegant rise
     animateSectionHeader('.contact');
     gsap.fromTo('.contact-card', { y: 40, opacity: 0, scale: 0.95 }, {
       y: 0, opacity: 1, scale: 1, duration: 0.7, ease: 'back.out(1.3)', stagger: 0.12,
@@ -1857,13 +1834,11 @@
       scrollTrigger: { trigger: '.contact-cta', start: 'top 85%', toggleActions: 'play none none none' }
     });
 
-    // 9. FOOTER — subtle fade in
     gsap.fromTo('.footer', { opacity: 0 }, {
       opacity: 1, duration: 0.8, ease: smooth,
       scrollTrigger: { trigger: '.footer', start: 'top 95%', toggleActions: 'play none none none' }
     });
 
-    // 10. Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const target = document.querySelector(this.getAttribute('href'));
@@ -1876,76 +1851,76 @@
 
     // Product modal data
     const productData = {
-      'Brown Flaxseeds': {
-        category: 'Oilseed',
-        desc: 'Our brown flax seeds (linseed) are nutrient-rich and traded with consistent quality grading. Flax seeds are valued for their high omega-3 fatty acid content and are used extensively in health food production, bakery products, and industrial oil manufacturing. We ensure every batch meets strict quality parameters including moisture, purity, and oil content standards required by European processors.',
+      'Rudieji lin\u0173 s\u0117menys': {
+        category: 'Aliejin\u0117 kult\u016bra',
+        desc: 'M\u016bs\u0173 rudieji lin\u0173 s\u0117menys yra turtingi maistingomis med\u017eiagomis ir prekiaujami su nuosekliu kokyb\u0117s \u012fvertinimu. Lin\u0173 s\u0117menys vertinami d\u0117l didelio omega-3 riebali\u0173 r\u016bg\u0161\u010di\u0173 kiekio ir pla\u010diai naudojami sveikos mitybos produkt\u0173, kepini\u0173 ir pramoninio aliejaus gamyboje. U\u017etikriname, kad kiekviena partija atitinka grie\u017etus kokyb\u0117s parametrus, \u012fskaitant dr\u0117gm\u0117s, grynumo ir aliejingumo standartus, reikalaujamus Europos perdirb\u0117j\u0173.',
         details: [
-          { label: 'Origin', value: 'Central Europe' },
-          { label: 'Use Cases', value: 'Health foods, bakery, industrial oils' },
-          { label: 'Key Nutrient', value: 'High Omega-3 content' },
-          { label: 'Quality', value: 'Graded for purity & moisture' }
+          { label: 'Kilm\u0117', value: 'Vidurio Europa' },
+          { label: 'Naudojimas', value: 'Sveika mityba, kepiniai, pramoninis aliejus' },
+          { label: 'Pagrindin\u0117 med\u017eiaga', value: 'Didelis Omega-3 kiekis' },
+          { label: 'Kokyb\u0117', value: '\u012evertinta pagal grynum\u0105 ir dr\u0117gm\u0119' }
         ]
       },
-      'White Mustard Seeds': {
-        category: 'Oilseed',
-        desc: 'Our premium white mustard seeds are carefully sourced from trusted European farms and undergo rigorous quality checks before trade. White mustard seeds are widely used in the food processing industry for condiment production, as well as in oil extraction and pharmaceutical applications. We supply both whole seeds and cleaned varieties, graded to meet international standards for purity, moisture content, and oil yield.',
+      'Balt\u0173j\u0173 garsty\u010di\u0173 s\u0117klos': {
+        category: 'Aliejin\u0117 kult\u016bra',
+        desc: 'M\u016bs\u0173 auk\u0161\u010diausios kokyb\u0117s balt\u0173j\u0173 garsty\u010di\u0173 s\u0117klos kruop\u0161\u010diai atrinktos i\u0161 patikim\u0173 Europos \u016bki\u0173 ir prie\u0161 prekyb\u0105 pereina grie\u017et\u0105 kokyb\u0117s kontrol\u0119. Balt\u0173j\u0173 garsty\u010di\u0173 s\u0117klos pla\u010diai naudojamos maisto perdirbimo pramon\u0117je prieskonini\u0173 pada\u017e\u0173 gamybai, taip pat aliejaus ekstrahavimui ir farmacijos srityje. Tiekiame tiek neapdirbtas, tiek i\u0161valytas s\u0117klas, \u012fvertintas pagal tarptautinius grynumo, dr\u0117gm\u0117s ir aliejingumo standartus.',
         details: [
-          { label: 'Origin', value: 'Central & Eastern Europe' },
-          { label: 'Use Cases', value: 'Condiments, oil extraction, pharmaceuticals' },
-          { label: 'Grades', value: 'Whole, cleaned, food-grade' },
-          { label: 'Availability', value: 'Year-round supply' }
+          { label: 'Kilm\u0117', value: 'Vidurio ir Ryt\u0173 Europa' },
+          { label: 'Naudojimas', value: 'Prieskoniai, aliejaus ekstrakcija, farmacija' },
+          { label: 'R\u016b\u0161ys', value: 'Neapdirbtos, i\u0161valytos, maistinio laipsnio' },
+          { label: 'Prieinamumas', value: 'Tiekimas vis\u0105 met\u0173' }
         ]
       },
-      'Yellow Mustard Seeds': {
-        category: 'Oilseed',
-        desc: 'Our premium yellow mustard seeds are sourced from reliable European growers and selected for their strong flavor profile and high oil content. Yellow mustard seeds are essential in condiment manufacturing, spice blends, and oil extraction. Each batch is quality-tested for purity, moisture, and consistency to meet the demands of food processors and industrial buyers alike.',
+      'Gelton\u0173j\u0173 garsty\u010di\u0173 s\u0117klos': {
+        category: 'Aliejin\u0117 kult\u016bra',
+        desc: 'M\u016bs\u0173 auk\u0161\u010diausios kokyb\u0117s gelton\u0173j\u0173 garsty\u010di\u0173 s\u0117klos gautos i\u0161 patikim\u0173 Europos augintoj\u0173 ir atrinktos d\u0117l stipraus skonio profilio bei didelio aliejingumo. Gelton\u0173j\u0173 garsty\u010di\u0173 s\u0117klos yra b\u016btinos prieskonini\u0173 pada\u017e\u0173 gamyboje, prieskoni\u0173 mi\u0161iniuose ir aliejaus ekstrahavime. Kiekviena partija tikrinama d\u0117l grynumo, dr\u0117gm\u0117s ir nuoseklumo, kad atitikt\u0173 maisto perdirb\u0117j\u0173 ir pramonini\u0173 pirk\u0117j\u0173 reikalavimus.',
         details: [
-          { label: 'Origin', value: 'Central & Eastern Europe' },
-          { label: 'Use Cases', value: 'Condiments, spice blends, oil extraction' },
-          { label: 'Grades', value: 'Whole, cleaned, food-grade' },
-          { label: 'Availability', value: 'Year-round supply' }
+          { label: 'Kilm\u0117', value: 'Vidurio ir Ryt\u0173 Europa' },
+          { label: 'Naudojimas', value: 'Prieskoniai, prieskoni\u0173 mi\u0161iniai, aliejaus ekstrakcija' },
+          { label: 'R\u016b\u0161ys', value: 'Neapdirbtos, i\u0161valytos, maistinio laipsnio' },
+          { label: 'Prieinamumas', value: 'Tiekimas vis\u0105 met\u0173' }
         ]
       },
-      'Oats': {
-        category: 'Cereal Grain',
-        desc: 'Our clean, high-yield oats serve both the food processing and animal feed industries. Oats have seen growing demand driven by the health food market — used in cereals, oat milk production, granola, and bakery products. We also supply feed-grade oats for livestock nutrition. Every batch is tested for purity, moisture content, and beta-glucan levels to match the specifications of food manufacturers and feed producers across Europe.',
+      'Avi\u017eos': {
+        category: 'Javai',
+        desc: 'M\u016bs\u0173 \u0161varios, derlingos avi\u017eos skirtos tiek maisto perdirbimui, tiek gyvuli\u0173 pa\u0161ar\u0173 pramonei. Avi\u017e\u0173 paklausa auga d\u0117l sveikos mitybos rinkos \u2014 jos naudojamos dribsni\u0173, avi\u017e\u0173 pieno, granola ir kepini\u0173 gamyboje. Taip pat tiekiame pa\u0161arinio laipsnio avi\u017eas gyvuli\u0173 mitybai. Kiekviena partija tikrinama d\u0117l grynumo, dr\u0117gm\u0117s ir beta-gliukano kiekio, kad atitikt\u0173 maisto gamintoj\u0173 ir pa\u0161ar\u0173 gamintoj\u0173 specifikacijas visoje Europoje.',
         details: [
-          { label: 'Origin', value: 'Northern & Central Europe' },
-          { label: 'Use Cases', value: 'Cereals, oat milk, feed' },
-          { label: 'Quality', value: 'Tested for purity & beta-glucan' },
-          { label: 'Grades', value: 'Food-grade & feed-grade' }
+          { label: 'Kilm\u0117', value: '\u0160iaur\u0117s ir Vidurio Europa' },
+          { label: 'Naudojimas', value: 'Dribsniai, avi\u017e\u0173 pienas, pa\u0161arai' },
+          { label: 'Kokyb\u0117', value: 'Tikrinta d\u0117l grynumo ir beta-gliukano' },
+          { label: 'R\u016b\u0161ys', value: 'Maistinio ir pa\u0161arinio laipsnio' }
         ]
       },
-      'Rye': {
-        category: 'Cereal Grain',
-        desc: 'We trade robust rye grain sourced from reliable Central European producers. Rye is a staple grain in European bread-making, particularly for traditional dark breads and crispbreads. It is also used in animal feed and in the production of rye whiskey and vodka. Our rye meets strict quality parameters for Hagberg falling number, protein content, and cleanliness — ensuring it is suitable for milling, baking, and distilling applications.',
+      'Rugiai': {
+        category: 'Javai',
+        desc: 'Prekiaujame tvirtais rugi\u0173 gr\u016bdais i\u0161 patikim\u0173 Vidurio Europos gamintoj\u0173. Rugiai yra pagrindinis Europos duonos kepimo gr\u016bdas, ypa\u010d tradicin\u0117s juodos duonos ir trapios duonos gamyboje. Jie taip pat naudojami gyvuli\u0173 pa\u0161aruose bei rugi\u0173 viskio ir degtin\u0117s gamyboje. M\u016bs\u0173 rugiai atitinka grie\u017etus kokyb\u0117s parametrus pagal Hagberg kritimo skai\u010di\u0173, baltym\u0173 kiek\u012f ir \u0161varium\u0105 \u2014 u\u017etikrinant tinkamum\u0105 malimui, kepimui ir distiliavimui.',
         details: [
-          { label: 'Origin', value: 'Central European producers' },
-          { label: 'Use Cases', value: 'Bread-making, distilling, feed' },
-          { label: 'Quality Tests', value: 'Hagberg, protein, purity' },
-          { label: 'Tradition', value: 'European staple grain' }
+          { label: 'Kilm\u0117', value: 'Vidurio Europos gamintojai' },
+          { label: 'Naudojimas', value: 'Duonos kepimas, distiliavimas, pa\u0161arai' },
+          { label: 'Kokyb\u0117s testai', value: 'Hagberg, baltymai, grynumas' },
+          { label: 'Tradicija', value: 'Europos pagrindinis gr\u016bdas' }
         ]
       },
-      'Oilseed Radish': {
-        category: 'Specialist Crop',
-        desc: 'Oilseed radish is a specialist crop primarily used in oil production and as a high-performance cover crop in sustainable agriculture. As a cover crop, it helps improve soil structure, suppress weeds, and reduce nitrogen leaching. The seeds are also pressed for oil used in biodiesel and industrial applications. We work with experienced growers to ensure consistent seed quality and germination rates for both agricultural and industrial buyers.',
+      'Aliejiniai ridikai': {
+        category: 'Specialist\u0173 kult\u016bra',
+        desc: 'Aliejiniai ridikai yra specialist\u0173 kult\u016bra, daugiausia naudojama aliejaus gamyboje ir kaip auk\u0161to na\u0161umo tarpinis pas\u0117lis tvariame \u017eem\u0117s \u016bkyje. Kaip tarpinis pas\u0117lis, jie padeda gerinti dirvos strukt\u016br\u0105, slopinti pikt\u017eoles ir ma\u017einti azoto i\u0161plovim\u0105. S\u0117klos taip pat spaud\u017eiamos aliejui, naudojamam biodyzeline ir pramonin\u0117se srityse. Dirbame su patyrusiais augintojais, u\u017etikrinant nuosekli\u0105 s\u0117kl\u0173 kokyb\u0119 ir daigum\u0105 tiek \u017eem\u0117s \u016bkio, tiek pramoniniams pirk\u0117jams.',
         details: [
-          { label: 'Origin', value: 'European specialist farms' },
-          { label: 'Use Cases', value: 'Oil production, cover cropping' },
-          { label: 'Agriculture', value: 'Soil improvement & weed control' },
-          { label: 'Market', value: 'Industrial & agricultural' }
+          { label: 'Kilm\u0117', value: 'Europos specializuoti \u016bkiai' },
+          { label: 'Naudojimas', value: 'Aliejaus gamyba, tarpinis pas\u0117lis' },
+          { label: '\u017dem\u0117s \u016bkis', value: 'Dirvos gerinimas ir pikt\u017eoli\u0173 kontrol\u0117' },
+          { label: 'Rinka', value: 'Pramonin\u0117 ir \u017eem\u0117s \u016bkio' }
         ]
       }
     };
 
     // Product image mapping
     const productImages = {
-      'Brown Flaxseeds': 'public/Flaxseed.png',
-      'White Mustard Seeds': 'public/White mustard.png',
-      'Yellow Mustard Seeds': 'public/Yellow mustard.png',
-      'Oats': 'public/Oats.png',
-      'Rye': 'public/Rye.png',
-      'Oilseed Radish': 'public/oilseed radish.png'
+      'Rudieji lin\u0173 s\u0117menys': '../public/Flaxseed.png',
+      'Balt\u0173j\u0173 garsty\u010di\u0173 s\u0117klos': '../public/White mustard.png',
+      'Gelton\u0173j\u0173 garsty\u010di\u0173 s\u0117klos': '../public/Yellow mustard.png',
+      'Avi\u017eos': '../public/Oats.png',
+      'Rugiai': '../public/Rye.png',
+      'Aliejiniai ridikai': '../public/oilseed radish.png'
     };
 
     // Product modal logic

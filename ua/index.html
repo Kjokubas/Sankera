@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SANKERA — Trusted Grain Traders | Warsaw, Poland</title>
-  <meta name="description" content="Sankera Sp. z o.o. — Specialists in high-quality grain trade, connecting trusted farmers, producers, and processing companies across Europe.">
+  <title>SANKERA - Надійні торговці зерном | Варшава, Польща</title>
+  <meta name="description" content="Sankera Sp. z o.o. - Спеціалісти з торгівлі високоякісним зерном, з'єднуємо надійних фермерів, виробників та переробні компанії по всій Європі.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -297,7 +297,7 @@
     .hero {
       width: 100%;
       min-height: 100vh;
-      background: linear-gradient(rgba(17, 26, 15, 0.53), rgba(17, 26, 15, 0.53)), url('public/Mountains.jpg') center center / cover no-repeat;
+      background: linear-gradient(rgba(17, 26, 15, 0.53), rgba(17, 26, 15, 0.53)), url('../public/Mountains.jpg') center center / cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1337,33 +1337,27 @@
       opacity: 0;
     }
 
-    /* Smooth reveal line for section labels */
     .section-label {
       position: relative;
     }
 
-    /* Counter animation */
     .stat-number {
       display: inline-block;
     }
 
-    /* Subtle parallax on scroll */
     .hero {
       will-change: transform;
     }
 
-    /* Product card hover lift enhancement */
     .product-card {
       transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
-    /* Smooth line draw for decorative elements */
     @keyframes lineGrow {
       from { transform: scaleX(0); }
       to { transform: scaleX(1); }
     }
 
-    /* Gentle floating for GMP badge */
     @keyframes subtleFloat {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-6px); }
@@ -1398,26 +1392,26 @@
       </label>
       <div class="nav-right">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#strengths">Strengths</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">Про нас</a></li>
+          <li><a href="#products">Продукція</a></li>
+          <li><a href="#strengths">Переваги</a></li>
+          <li><a href="#contact">Контакти</a></li>
           <div class="lang-dropdown-mobile">
-            <a href="/en" class="lang-active">EN</a>
+            <a href="/en">EN</a>
             <a href="/lt">LT</a>
             <a href="/pl">PL</a>
-            <a href="/ua">UA</a>
+            <a href="/ua" class="lang-active">UA</a>
           </div>
         </ul>
         <div class="lang-dropdown" id="langDropdown">
           <button class="lang-dropdown-btn" onclick="document.getElementById('langDropdown').classList.toggle('open')">
-            EN <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            UA <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="lang-dropdown-menu">
-            <a href="/en" class="lang-active">English</a>
+            <a href="/en">English</a>
             <a href="/lt">Lietuvių</a>
             <a href="/pl">Polski</a>
-            <a href="/ua">Українська</a>
+            <a href="/ua" class="lang-active">Українська</a>
           </div>
         </div>
       </div>
@@ -1428,15 +1422,15 @@
   <section class="hero" id="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-label">EST. Warsaw &middot; Grain Trading</p>
+      <p class="hero-label">Торгівля зерном з 2022</p>
       <h1>
-        <span class="hero-line-1">Trusted Grain</span><br>
-        <span class="hero-line-2"><span class="accent">Traders</span></span>
+        <span class="hero-line-1">Надійні Зернові</span><br>
+        <span class="hero-line-2"><span class="accent">Трейдери</span></span>
       </h1>
-      <p class="hero-sub">Specialists in high-quality grain trade — connecting trusted farmers, producers, and processing companies across Europe.</p>
+      <p class="hero-sub">Спеціалісти з торгівлі високоякісним зерном - з'єднуємо надійних фермерів, виробників та переробні компанії по всій Європі.</p>
       <div class="hero-buttons">
-        <a href="#contact" class="btn-primary">Get In Touch</a>
-        <a href="#products" class="btn-secondary">Our Products &darr;</a>
+        <a href="#contact" class="btn-primary">Зв'яжіться з нами</a>
+        <a href="#products" class="btn-secondary">Наша продукція &darr;</a>
       </div>
     </div>
   </section>
@@ -1446,26 +1440,26 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-left">
-          <p class="section-label">About Sankera</p>
-          <h2>Where Quality Meets Reliability</h2>
-          <p>We specialize in the trade of high-quality grains, serving as both a buyer and supplier. Our core products include white and yellow mustard seeds, brown flaxseeds, oilseed radish, oats, and rye.</p>
-          <p>We work closely with farmers, producers, and processing companies to ensure a consistent supply of grains that meet the highest quality standards. Whether sourcing from trusted growers or supplying directly to clients — reliability is at our core.</p>
+          <p class="section-label">Про Sankera</p>
+          <h2>Де якість зустрічає надійність</h2>
+          <p>Ми спеціалізуємося на торгівлі високоякісним зерном, виступаючи як покупцем, так і постачальником. Наша основна продукція включає насіння білої та жовтої гірчиці, коричневе насіння льону, олійну редьку, овес та жито.</p>
+          <p>Ми тісно співпрацюємо з фермерами, виробниками та переробними підприємствами, щоб забезпечити стабільне постачання зерна, що відповідає найвищим стандартам якості. Незалежно від того, чи закуповуємо ми у надійних виробників, чи постачаємо безпосередньо клієнтам - надійність є нашою основою.</p>
           <div class="about-stats">
             <div class="stat-box">
               <div class="stat-number">6</div>
-              <div class="stat-label">Grain Types</div>
+              <div class="stat-label">Видів зерна</div>
             </div>
             <div class="stat-box">
               <div class="stat-number">4</div>
-              <div class="stat-label">Languages Spoken</div>
+              <div class="stat-label">Мови</div>
             </div>
             <div class="stat-box">
               <div class="stat-number">EU</div>
-              <div class="stat-label">Market Coverage</div>
+              <div class="stat-label">Ринкове покриття</div>
             </div>
           </div>
           <div class="gmp-badge">
-            <img src="public/GMP.png" alt="GMP Certification">
+            <img src="../public/GMP.png" alt="Сертифікація GMP">
           </div>
         </div>
       </div>
@@ -1476,52 +1470,52 @@
   <section class="products" id="products">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">What We Trade</p>
-        <h2>Our Product Range</h2>
-        <p>High-quality grains sourced from trusted European growers</p>
+        <p class="section-label">Чим ми торгуємо</p>
+        <h2>Наш асортимент продукції</h2>
+        <p>Високоякісне зерно від надійних європейських виробників</p>
       </div>
       <div class="products-grid">
         <div class="product-card">
           <div class="product-image">
-            <img src="public/Flaxseed.png" alt="Brown Flaxseeds">
+            <img src="../public/Flaxseed.png" alt="Brown Flaxseeds">
           </div>
           <h3>Brown Flaxseeds</h3>
-          <p>Nutrient-rich flax seeds with consistent quality grading.</p>
+          <p>Багате на поживні речовини насіння льону зі стабільною оцінкою якості.</p>
         </div>
         <div class="product-card">
           <div class="product-image">
-            <img src="public/White mustard.png" alt="White Mustard Seeds">
+            <img src="../public/White mustard.png" alt="White Mustard Seeds">
           </div>
           <h3>White Mustard Seeds</h3>
-          <p>Premium quality white mustard seeds for processing and export.</p>
+          <p>Насіння білої гірчиці преміум-якості для переробки та експорту.</p>
         </div>
         <div class="product-card">
           <div class="product-image">
-            <img src="public/Yellow mustard.png" alt="Yellow Mustard Seeds">
+            <img src="../public/Yellow mustard.png" alt="Yellow Mustard Seeds">
           </div>
           <h3>Yellow Mustard Seeds</h3>
-          <p>Premium quality yellow mustard seeds for condiments and oil extraction.</p>
+          <p>Насіння жовтої гірчиці преміум-якості для виробництва приправ та олії.</p>
         </div>
         <div class="product-card">
           <div class="product-image">
-            <img src="public/Oats.png" alt="Oats">
+            <img src="../public/Oats.png" alt="Oats">
           </div>
           <h3>Oats</h3>
-          <p>Clean, high-yield oats for food processing and feed industries.</p>
+          <p>Чистий високоврожайний овес для харчової промисловості та кормовиробництва.</p>
         </div>
         <div class="product-card">
           <div class="product-image">
-            <img src="public/Rye.png" alt="Rye">
+            <img src="../public/Rye.png" alt="Rye">
           </div>
           <h3>Rye</h3>
-          <p>Robust rye grain sourced from reliable Central European producers.</p>
+          <p>Високоякісне жито від надійних центральноєвропейських виробників.</p>
         </div>
         <div class="product-card">
           <div class="product-image">
-            <img src="public/oilseed radish.png" alt="Oilseed Radish">
+            <img src="../public/oilseed radish.png" alt="Oilseed Radish">
           </div>
           <h3>Oilseed Radish</h3>
-          <p>Specialist crop used in oil production and cover cropping.</p>
+          <p>Спеціалізована культура для виробництва олії та покривного землеробства.</p>
         </div>
       </div>
     </div>
@@ -1531,9 +1525,9 @@
   <section class="strengths" id="strengths">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">Why Choose Us</p>
-        <h2>The Sankera Difference</h2>
-        <p style="max-width:600px;margin:0 auto">What sets us apart in the European grain trading market</p>
+        <p class="section-label">Чому обирають нас</p>
+        <h2>Відмінність Sankera</h2>
+        <p style="max-width:600px;margin:0 auto">Що вирізняє нас на європейському ринку торгівлі зерном</p>
       </div>
       <div class="strengths-grid">
         <div class="strength-card">
@@ -1543,8 +1537,8 @@
               <circle cx="8" cy="8" r="3"/><circle cx="24" cy="8" r="3"/><circle cx="8" cy="24" r="3"/><circle cx="24" cy="24" r="3"/><circle cx="16" cy="16" r="3"/>
             </svg>
           </div>
-          <h3>Wide Product Range</h3>
-          <p>Offering diverse high-quality grains including mustard seeds, flaxseeds, oilseed radish, oats, and rye.</p>
+          <h3>Широкий асортимент продукції</h3>
+          <p>Пропонуємо різноманітне високоякісне зерно, включаючи насіння гірчиці, льону, олійну редьку, овес та жито.</p>
         </div>
         <div class="strength-card">
           <div class="strength-number">02</div>
@@ -1554,8 +1548,8 @@
               <polyline points="6 12 8 16 12 14"/><polyline points="26 20 24 16 20 18"/>
             </svg>
           </div>
-          <h3>Dual Role in the Market</h3>
-          <p>Operating as both a buyer and supplier — ensuring flexibility and reliability in every trade.</p>
+          <h3>Подвійна роль на ринку</h3>
+          <p>Працюємо як покупець і постачальник - забезпечуючи гнучкість та надійність у кожній угоді.</p>
         </div>
         <div class="strength-card">
           <div class="strength-number">03</div>
@@ -1564,8 +1558,8 @@
               <circle cx="10" cy="16" r="5"/><circle cx="22" cy="16" r="5"/><line x1="15" y1="16" x2="17" y2="16"/>
             </svg>
           </div>
-          <h3>Strong Partnerships</h3>
-          <p>Close cooperation with farmers, producers, and processing companies guarantees long-term supply chains.</p>
+          <h3>Міцні партнерства</h3>
+          <p>Тісна співпраця з фермерами, виробниками та переробними підприємствами гарантує довгострокові ланцюги поставок.</p>
         </div>
         <div class="strength-card">
           <div class="strength-number">04</div>
@@ -1575,8 +1569,8 @@
               <polyline points="10 16 14 20 22 12" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <h3>Quality Assurance</h3>
-          <p>Commitment to delivering grains that meet the highest standards through careful sourcing and selection.</p>
+          <h3>Гарантія якості</h3>
+          <p>Відданість постачанню зерна, що відповідає найвищим стандартам, завдяки ретельному відбору та селекції.</p>
         </div>
         <div class="strength-card">
           <div class="strength-number">05</div>
@@ -1586,8 +1580,8 @@
               <line x1="16" y1="11" x2="8" y2="21"/><line x1="16" y1="11" x2="24" y2="21"/><line x1="11" y1="24" x2="21" y2="24"/>
             </svg>
           </div>
-          <h3>Trusted Network</h3>
-          <p>Established relationships with reliable growers and traders provide consistency in every transaction.</p>
+          <h3>Надійна мережа</h3>
+          <p>Встановлені зв'язки з надійними виробниками та трейдерами забезпечують стабільність кожної транзакції.</p>
         </div>
         <div class="strength-card">
           <div class="strength-number">06</div>
@@ -1598,8 +1592,8 @@
               <polygon points="22 6 23 9 26 9 24 11 25 14 22 12 19 14 20 11 18 9 21 9" fill="currentColor" stroke="none"/>
             </svg>
           </div>
-          <h3>Customer-Oriented Approach</h3>
-          <p>Supplying products directly to trusted clients with a focus on reliability, transparency, and mutual growth.</p>
+          <h3>Клієнтоорієнтований підхід</h3>
+          <p>Постачаємо продукцію безпосередньо надійним клієнтам з акцентом на надійність, прозорість та взаємне зростання.</p>
         </div>
       </div>
     </div>
@@ -1611,19 +1605,19 @@
       <div class="trust-items">
         <div class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><ellipse cx="12" cy="12" rx="5" ry="10"/></svg>
-          <span>European Market Coverage</span>
+          <span>Покриття європейського ринку</span>
         </div>
         <div class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4 C8 4 4 8 4 12 L8 12 C8 10 10 8 12 8 V4Z"/><path d="M12 4 C16 4 20 8 20 12 L16 12 C16 10 14 8 12 8 V4Z"/><path d="M4 12 C4 16 8 20 12 20 V16 C10 16 8 14 8 12 H4Z"/><path d="M20 12 C20 16 16 20 12 20 V16 C14 16 16 14 16 12 H20Z"/></svg>
-          <span>Long-Term Trade Partnerships</span>
+          <span>Довгострокові торговельні партнерства</span>
         </div>
         <div class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 L15 8 L22 9 L17 14 L18 22 L12 18 L6 22 L7 14 L2 9 L9 8 Z"/></svg>
-          <span>Highest Quality Standards</span>
+          <span>Найвищі стандарти якості</span>
         </div>
         <div class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="2" x2="12" y2="22"/><path d="M8 6 Q12 10 16 6"/><path d="M8 10 Q12 14 16 10"/><path d="M8 14 Q12 18 16 14"/></svg>
-          <span>6 Premium Grain Products</span>
+          <span>6 видів зернової продукції преміум-класу</span>
         </div>
       </div>
     </div>
@@ -1633,9 +1627,9 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">Get In Touch</p>
-        <h2>Let's Build a Partnership</h2>
-        <p style="max-width:560px;margin:0 auto">Our team speaks English, Polish, Lithuanian, and Ukrainian. Reach out to our sales team — we'll respond as soon as possible.</p>
+        <p class="section-label">Зв'яжіться з нами</p>
+        <h2>Побудуймо партнерство</h2>
+        <p style="max-width:560px;margin:0 auto">Наша команда розмовляє англійською, польською, литовською та українською. Зверніться до нашого відділу продажів - ми відповімо якнайшвидше.</p>
       </div>
       <div class="contact-grid">
         <div>
@@ -1643,21 +1637,21 @@
             <a href="https://maps.google.com/?q=Aleja+Solidarności+117/207,+00-140+Warszawa,+Poland" target="_blank" rel="noopener" class="contact-card">
               <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2 C6 2 3 5.5 3 10 C3 16 10 18 10 18 C10 18 17 16 17 10 C17 5.5 14 2 10 2Z"/><circle cx="10" cy="10" r="3"/></svg>
               <div class="contact-card-content">
-                <div class="contact-label">Address</div>
-                <div class="contact-value">Ul. Aleja &#8222;Solidarno&#347;ci&#8221; 117/207<br>00-140 Warszawa, Poland</div>
+                <div class="contact-label">Адреса</div>
+                <div class="contact-value">Ul. Aleja &#8222;Solidarno&#347;ci&#8221; 117/207<br>00-140 Warszawa, Польща</div>
               </div>
             </a>
             <a href="mailto:sales@sankera.com" class="contact-card">
               <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="16" height="12" rx="2"/><polyline points="2 4 10 11 18 4"/></svg>
               <div class="contact-card-content">
-                <div class="contact-label">Email</div>
+                <div class="contact-label">Електронна пошта</div>
                 <div class="contact-value">sales@sankera.com</div>
               </div>
             </a>
             <a href="tel:+48604063265" class="contact-card">
               <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4 C3 4 4 2 6 2 C8 2 9 4 9 4 L9 6 C9 6 9 7 8 8 L7 9 C7 9 9 13 11 15 C13 17 15 17 15 17 L16 16 C17 15 18 15 18 15 L18 17 C18 17 18 19 16 19 C14 19 3 12 3 4Z"/></svg>
               <div class="contact-card-content">
-                <div class="contact-label">Phone</div>
+                <div class="contact-label">Телефон</div>
                 <div class="contact-value">+48 604 063 265</div>
               </div>
             </a>
@@ -1668,12 +1662,12 @@
           </div>
         </div>
         <div class="contact-cta">
-          <h3>Ready to Trade?</h3>
-          <p>Whether you're looking to buy or sell premium grains, our team is ready to help you build a reliable, long-term supply chain.</p>
-          <a href="mailto:sales@sankera.com" class="btn-email">Email Our Sales Team &rarr;</a>
+          <h3>Готові до торгівлі?</h3>
+          <p>Незалежно від того, чи ви хочете купити або продати зерно преміум-якості, наша команда готова допомогти вам побудувати надійний довгостроковий ланцюг поставок.</p>
+          <a href="mailto:sales@sankera.com" class="btn-email">Напишіть відділу продажів &rarr;</a>
           <div class="language-row">
             <span class="flags">&#127468;&#127463; &#127477;&#127473; &#127473;&#127481; &#127482;&#127462;</span>
-            <span>We speak your language</span>
+            <span>Ми розмовляємо вашою мовою</span>
           </div>
         </div>
       </div>
@@ -1695,7 +1689,7 @@
         <p class="modal-desc" id="modalDesc"></p>
         <div class="product-modal-details" id="modalDetails"></div>
         <div class="product-modal-cta">
-          <a href="mailto:sales@sankera.com">Inquire Now &rarr;</a>
+          <a href="mailto:sales@sankera.com">Запитати зараз &rarr;</a>
           <span>sales@sankera.com</span>
         </div>
       </div>
@@ -1709,7 +1703,7 @@
         <span class="logo">SANKERA</span>
         <span class="suffix">Sp. z o.o.</span>
       </div>
-      <div class="footer-center">Trusted Grain Traders &middot; Warsaw, Poland</div>
+      <div class="footer-center">Надійні торговці зерном &middot; Варшава, Польща</div>
       <div class="footer-right">&copy; 2025 Sankera Sp. z o.o.</div>
     </div>
   </footer>
@@ -1739,17 +1733,13 @@
       });
     });
 
-    // ═══════ PREMIUM ANIMATIONS ═══════
-
     const smooth = 'power4.out';
     const snappy = 'expo.out';
 
-    // 1. NAV — slides down elegantly on load
     gsap.to('.nav', {
       y: 0, opacity: 1, duration: 1, ease: smooth, delay: 0.1
     });
 
-    // 2. HERO — cinematic staggered entrance
     document.addEventListener('DOMContentLoaded', () => {
       const heroTl = gsap.timeline({ defaults: { ease: snappy } });
       heroTl
@@ -1761,19 +1751,12 @@
         .fromTo('.hero-buttons', { y: 20, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 0.8 }, 1.5);
     });
 
-    // 3. Subtle parallax on hero image
     gsap.to('.hero', {
       backgroundPositionY: '30%',
       ease: 'none',
-      scrollTrigger: {
-        trigger: '.hero',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: true
-      }
+      scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
     });
 
-    // Helper: animate section header elements
     function animateSectionHeader(trigger) {
       const tl = gsap.timeline({
         scrollTrigger: { trigger: trigger, start: 'top 78%', toggleActions: 'play none none none' }
@@ -1784,7 +1767,6 @@
       return tl;
     }
 
-    // 4. ABOUT — text reveals line by line with stats counting up
     const aboutTl = gsap.timeline({
       scrollTrigger: { trigger: '.about', start: 'top 75%', toggleActions: 'play none none none' }
     });
@@ -1797,14 +1779,12 @@
         document.querySelector('.gmp-badge')?.classList.add('animated');
       }}, '-=0.2');
 
-    // 5. PRODUCTS — section header + cards with scale-up reveal
     animateSectionHeader('.products');
     gsap.fromTo('.product-card', { y: 60, opacity: 0, scale: 0.92 }, {
       y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.2)', stagger: 0.08,
       scrollTrigger: { trigger: '.products-grid', start: 'top 78%', toggleActions: 'play none none none' }
     });
 
-    // 6. STRENGTHS — section header + cards slide from alternating sides
     animateSectionHeader('.strengths');
     document.querySelectorAll('.strength-card').forEach((card, i) => {
       const fromX = i % 2 === 0 ? -40 : 40;
@@ -1814,13 +1794,11 @@
       });
     });
 
-    // 7. TRUST BAR — numbers count up + items stagger in
     gsap.fromTo('.trust-item', { y: 30, opacity: 0 }, {
       y: 0, opacity: 1, duration: 0.6, ease: smooth, stagger: 0.12,
       scrollTrigger: { trigger: '.trust-bar', start: 'top 85%', toggleActions: 'play none none none' }
     });
 
-    // Animate trust bar numbers counting up
     ScrollTrigger.create({
       trigger: '.trust-bar',
       start: 'top 85%',
@@ -1845,7 +1823,6 @@
       }
     });
 
-    // 8. CONTACT — section header + cards with elegant rise
     animateSectionHeader('.contact');
     gsap.fromTo('.contact-card', { y: 40, opacity: 0, scale: 0.95 }, {
       y: 0, opacity: 1, scale: 1, duration: 0.7, ease: 'back.out(1.3)', stagger: 0.12,
@@ -1857,13 +1834,11 @@
       scrollTrigger: { trigger: '.contact-cta', start: 'top 85%', toggleActions: 'play none none none' }
     });
 
-    // 9. FOOTER — subtle fade in
     gsap.fromTo('.footer', { opacity: 0 }, {
       opacity: 1, duration: 0.8, ease: smooth,
       scrollTrigger: { trigger: '.footer', start: 'top 95%', toggleActions: 'play none none none' }
     });
 
-    // 10. Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const target = document.querySelector(this.getAttribute('href'));
@@ -1877,75 +1852,75 @@
     // Product modal data
     const productData = {
       'Brown Flaxseeds': {
-        category: 'Oilseed',
-        desc: 'Our brown flax seeds (linseed) are nutrient-rich and traded with consistent quality grading. Flax seeds are valued for their high omega-3 fatty acid content and are used extensively in health food production, bakery products, and industrial oil manufacturing. We ensure every batch meets strict quality parameters including moisture, purity, and oil content standards required by European processors.',
+        category: 'Олійна культура',
+        desc: 'Наше коричневе насіння льону (лляне насіння) багате на поживні речовини та продається зі стабільною оцінкою якості. Насіння льону цінується за високий вміст омега-3 жирних кислот і широко використовується у виробництві здорового харчування, хлібобулочних виробів та промислових олій. Ми гарантуємо, що кожна партія відповідає суворим параметрам якості, включаючи вологість, чистоту та вміст олії, які вимагають європейські переробники.',
         details: [
-          { label: 'Origin', value: 'Central Europe' },
-          { label: 'Use Cases', value: 'Health foods, bakery, industrial oils' },
-          { label: 'Key Nutrient', value: 'High Omega-3 content' },
-          { label: 'Quality', value: 'Graded for purity & moisture' }
+          { label: 'Походження', value: 'Центральна Європа' },
+          { label: 'Застосування', value: 'Здорове харчування, випічка, промислові олії' },
+          { label: 'Ключовий компонент', value: 'Високий вміст Омега-3' },
+          { label: 'Якість', value: 'Оцінка чистоти та вологості' }
         ]
       },
       'White Mustard Seeds': {
-        category: 'Oilseed',
-        desc: 'Our premium white mustard seeds are carefully sourced from trusted European farms and undergo rigorous quality checks before trade. White mustard seeds are widely used in the food processing industry for condiment production, as well as in oil extraction and pharmaceutical applications. We supply both whole seeds and cleaned varieties, graded to meet international standards for purity, moisture content, and oil yield.',
+        category: 'Олійна культура',
+        desc: 'Наше насіння білої гірчиці преміум-якості ретельно відбирається з перевірених європейських ферм і проходить суворий контроль якості перед продажем. Насіння білої гірчиці широко використовується в харчовій промисловості для виробництва приправ, а також у виробництві олії та фармацевтичних застосуваннях. Ми постачаємо як цілісне, так і очищене насіння, сортоване відповідно до міжнародних стандартів чистоти, вологості та виходу олії.',
         details: [
-          { label: 'Origin', value: 'Central & Eastern Europe' },
-          { label: 'Use Cases', value: 'Condiments, oil extraction, pharmaceuticals' },
-          { label: 'Grades', value: 'Whole, cleaned, food-grade' },
-          { label: 'Availability', value: 'Year-round supply' }
+          { label: 'Походження', value: 'Центральна та Східна Європа' },
+          { label: 'Застосування', value: 'Приправи, виробництво олії, фармацевтика' },
+          { label: 'Сорти', value: 'Цілісне, очищене, харчового класу' },
+          { label: 'Наявність', value: 'Постачання цілий рік' }
         ]
       },
       'Yellow Mustard Seeds': {
-        category: 'Oilseed',
-        desc: 'Our premium yellow mustard seeds are sourced from reliable European growers and selected for their strong flavor profile and high oil content. Yellow mustard seeds are essential in condiment manufacturing, spice blends, and oil extraction. Each batch is quality-tested for purity, moisture, and consistency to meet the demands of food processors and industrial buyers alike.',
+        category: 'Олійна культура',
+        desc: 'Наше насіння жовтої гірчиці преміум-якості відбирається від надійних європейських виробників за сильний смаковий профіль та високий вміст олії. Насіння жовтої гірчиці є незамінним у виробництві приправ, сумішей спецій та виробництві олії. Кожна партія перевіряється на чистоту, вологість та консистенцію, щоб задовольнити потреби харчових переробників та промислових покупців.',
         details: [
-          { label: 'Origin', value: 'Central & Eastern Europe' },
-          { label: 'Use Cases', value: 'Condiments, spice blends, oil extraction' },
-          { label: 'Grades', value: 'Whole, cleaned, food-grade' },
-          { label: 'Availability', value: 'Year-round supply' }
+          { label: 'Походження', value: 'Центральна та Східна Європа' },
+          { label: 'Застосування', value: 'Приправи, суміші спецій, виробництво олії' },
+          { label: 'Сорти', value: 'Цілісне, очищене, харчового класу' },
+          { label: 'Наявність', value: 'Постачання цілий рік' }
         ]
       },
       'Oats': {
-        category: 'Cereal Grain',
-        desc: 'Our clean, high-yield oats serve both the food processing and animal feed industries. Oats have seen growing demand driven by the health food market — used in cereals, oat milk production, granola, and bakery products. We also supply feed-grade oats for livestock nutrition. Every batch is tested for purity, moisture content, and beta-glucan levels to match the specifications of food manufacturers and feed producers across Europe.',
+        category: 'Зернова культура',
+        desc: 'Наш чистий високоврожайний овес обслуговує як харчову промисловість, так і кормовиробництво. Попит на овес зростає завдяки ринку здорового харчування - він використовується у виробництві каш, вівсяного молока, гранолі та хлібобулочних виробів. Ми також постачаємо кормовий овес для тваринництва. Кожна партія перевіряється на чистоту, вологість та вміст бета-глюкану відповідно до вимог виробників продуктів харчування та кормів по всій Європі.',
         details: [
-          { label: 'Origin', value: 'Northern & Central Europe' },
-          { label: 'Use Cases', value: 'Cereals, oat milk, feed' },
-          { label: 'Quality', value: 'Tested for purity & beta-glucan' },
-          { label: 'Grades', value: 'Food-grade & feed-grade' }
+          { label: 'Походження', value: 'Північна та Центральна Європа' },
+          { label: 'Застосування', value: 'Каші, вівсяне молоко, корми' },
+          { label: 'Якість', value: 'Перевірка чистоти та бета-глюкану' },
+          { label: 'Сорти', value: 'Харчовий та кормовий клас' }
         ]
       },
       'Rye': {
-        category: 'Cereal Grain',
-        desc: 'We trade robust rye grain sourced from reliable Central European producers. Rye is a staple grain in European bread-making, particularly for traditional dark breads and crispbreads. It is also used in animal feed and in the production of rye whiskey and vodka. Our rye meets strict quality parameters for Hagberg falling number, protein content, and cleanliness — ensuring it is suitable for milling, baking, and distilling applications.',
+        category: 'Зернова культура',
+        desc: 'Ми торгуємо високоякісним житом від надійних центральноєвропейських виробників. Жито є базовим зерном у європейському хлібопеченні, особливо для традиційних темних хлібів та хрустких хлібців. Воно також використовується у тваринних кормах та виробництві житнього віскі та горілки. Наше жито відповідає суворим параметрам якості за числом Хагберга, вмістом протеїну та чистотою - що робить його придатним для мукомельного, хлібопекарського та лікеро-горілчаного виробництва.',
         details: [
-          { label: 'Origin', value: 'Central European producers' },
-          { label: 'Use Cases', value: 'Bread-making, distilling, feed' },
-          { label: 'Quality Tests', value: 'Hagberg, protein, purity' },
-          { label: 'Tradition', value: 'European staple grain' }
+          { label: 'Походження', value: 'Центральноєвропейські виробники' },
+          { label: 'Застосування', value: 'Хлібопечення, дистиляція, корми' },
+          { label: 'Контроль якості', value: 'Хагберг, протеїн, чистота' },
+          { label: 'Традиція', value: 'Європейська базова культура' }
         ]
       },
       'Oilseed Radish': {
-        category: 'Specialist Crop',
-        desc: 'Oilseed radish is a specialist crop primarily used in oil production and as a high-performance cover crop in sustainable agriculture. As a cover crop, it helps improve soil structure, suppress weeds, and reduce nitrogen leaching. The seeds are also pressed for oil used in biodiesel and industrial applications. We work with experienced growers to ensure consistent seed quality and germination rates for both agricultural and industrial buyers.',
+        category: 'Спеціалізована культура',
+        desc: 'Олійна редька - це спеціалізована культура, яка переважно використовується у виробництві олії та як високоефективна покривна культура в сталому сільському господарстві. Як покривна культура вона допомагає покращити структуру ґрунту, придушити бур\'яни та зменшити вимивання азоту. Насіння також пресують для отримання олії, що використовується у виробництві біодизелю та промислових застосуваннях. Ми працюємо з досвідченими виробниками для забезпечення стабільної якості насіння та рівня проростання як для сільськогосподарських, так і для промислових покупців.',
         details: [
-          { label: 'Origin', value: 'European specialist farms' },
-          { label: 'Use Cases', value: 'Oil production, cover cropping' },
-          { label: 'Agriculture', value: 'Soil improvement & weed control' },
-          { label: 'Market', value: 'Industrial & agricultural' }
+          { label: 'Походження', value: 'Європейські спеціалізовані ферми' },
+          { label: 'Застосування', value: 'Виробництво олії, покривне землеробство' },
+          { label: 'Сільське господарство', value: 'Покращення ґрунту та боротьба з бур\'янами' },
+          { label: 'Ринок', value: 'Промисловий та сільськогосподарський' }
         ]
       }
     };
 
     // Product image mapping
     const productImages = {
-      'Brown Flaxseeds': 'public/Flaxseed.png',
-      'White Mustard Seeds': 'public/White mustard.png',
-      'Yellow Mustard Seeds': 'public/Yellow mustard.png',
-      'Oats': 'public/Oats.png',
-      'Rye': 'public/Rye.png',
-      'Oilseed Radish': 'public/oilseed radish.png'
+      'Brown Flaxseeds': '../public/Flaxseed.png',
+      'White Mustard Seeds': '../public/White mustard.png',
+      'Yellow Mustard Seeds': '../public/Yellow mustard.png',
+      'Oats': '../public/Oats.png',
+      'Rye': '../public/Rye.png',
+      'Oilseed Radish': '../public/oilseed radish.png'
     };
 
     // Product modal logic
