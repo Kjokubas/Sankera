@@ -101,22 +101,9 @@
       gap: 12px;
     }
 
-    .nav-logo::before {
-      content: '';
-      display: block;
-      width: 28px;
-      height: 1px;
-      background: var(--accent);
-      opacity: 0.5;
-    }
-
+    .nav-logo::before,
     .nav-logo::after {
-      content: '';
-      display: block;
-      width: 28px;
-      height: 1px;
-      background: var(--accent);
-      opacity: 0.5;
+      display: none;
     }
 
     .nav-tag {
@@ -1051,8 +1038,11 @@
     }
 
     .language-row .flags {
-      font-size: 1.2rem;
-      letter-spacing: 0.3em;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: rgba(0,0,0,0.7);
     }
 
     .language-row span:last-child {
@@ -1666,7 +1656,7 @@
           <p>Niezależnie od tego, czy chcesz kupić, czy sprzedać zboża premium, nasz zespół jest gotowy pomóc Ci zbudować niezawodny, długoterminowy łańcuch dostaw.</p>
           <a href="mailto:sales@sankera.com" class="btn-email">Napisz do działu sprzedaży &rarr;</a>
           <div class="language-row">
-            <span class="flags">&#127468;&#127463; &#127477;&#127473; &#127473;&#127481; &#127482;&#127462;</span>
+            <span class="flags">EN &middot; PL &middot; LT &middot; UA</span>
             <span>Mówimy w Twoim języku</span>
           </div>
         </div>
